@@ -45,21 +45,17 @@ jobs:
 
       # Setup .NET Core SDK
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v1.4.0
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
           source-url: ${{ env.AZURE_ARTIFACTS_FEED_URL }}
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.AZURE_PAT }} 
           
-      - name: Restore Nugets
-        run: |
-          dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org --configfile /home/runner/work/mongo-db-data-access/nuget.config
-          dotnet restore . --configfile /home/runner/work/mongo-db-data-access/nuget.config
-
       # Run dotnet build and package
       - name: dotnet build and publish
         run: |
+          dotnet restore
           dotnet build --configuration '${{ env.BUILD_CONFIGURATION }}'
           dotnet pack -c '${{ env.BUILD_CONFIGURATION }}' --version-suffix $GITHUB_RUN_ID
 
