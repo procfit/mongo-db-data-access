@@ -53,10 +53,9 @@ jobs:
           NUGET_AUTH_TOKEN: ${{ secrets.AZURE_PAT }} 
           
       - name: Restore Nugets
-        working-directory: src
         run: |
           dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org --configfile /home/runner/work/mongo-db-data-access/nuget.config
-          dotnet restore . --configfile /home/runner/work/mongo-db-data-access/nuget.config
+          dotnet restore --configfile /home/runner/work/mongo-db-data-access/nuget.config
 
       # Run dotnet build and package
       - name: dotnet build and publish
