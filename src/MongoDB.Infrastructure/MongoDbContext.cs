@@ -15,6 +15,7 @@ namespace MongoDB.Infrastructure
         #region Private Fields
 
         private readonly MongoClient _client;
+        
         private readonly IList<object> _commands;
 
         private static readonly object _emptyResult = new();
@@ -86,6 +87,13 @@ namespace MongoDB.Infrastructure
 
             _commands = new List<object>();
             _client = new MongoClient(clientSettings);
+            Database = _client.GetDatabase(databaseName, databaseSettings);
+        }
+
+        public MongoDbContext(MongoClient client, string databaseName, MongoDatabaseSettings databaseSettings = null)
+        {
+            _commands = new List<object>();
+            _client = client ?? throw new ArgumentException(nameof(client));
             Database = _client.GetDatabase(databaseName, databaseSettings);
         }
 
@@ -179,14 +187,14 @@ namespace MongoDB.Infrastructure
             return _emptyResult;
         }
 
-        public IMongoCollection<T> GetCollection<T>(MongoCollectionSettings settings = null)
+        public virtual IMongoCollection<T> GetCollection<T>(MongoCollectionSettings settings = null)
         {
             var collection = GetCollection<T>(typeof(T).Name, settings);
 
             return collection;
         }
 
-        public IMongoCollection<T> GetCollection<T>(string name, MongoCollectionSettings settings = null)
+        public virtual IMongoCollection<T> GetCollection<T>(string name, MongoCollectionSettings settings = null)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
