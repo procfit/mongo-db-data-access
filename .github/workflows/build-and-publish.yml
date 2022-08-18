@@ -31,11 +31,10 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       # Run dotnet build and package
-      - name: dotnet build and test
+      - name: dotnet build
         run: |
           dotnet restore
           dotnet build --configuration '${{ env.BUILD_CONFIGURATION }}'
-          dotnet test --configuration '${{ env.BUILD_CONFIGURATION }}'
 
   az-artifacts-build-and-deploy:
     needs: build
