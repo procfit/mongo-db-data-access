@@ -7,7 +7,7 @@
     <NoWarn>1701;1702;1705;1591</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AssemblyName>MongoDB.Generators</AssemblyName>
-    <PackageId>MongoDB.Data.Generators</PackageId>
+    <PackageId>Procfit.MongoDB.Data.Generators</PackageId>
     <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
     <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
     <Description>Provides Id Generators for MongoDB.Driver.</Description>

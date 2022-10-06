@@ -8,7 +8,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>MongoDB.QueryBuilder</RootNamespace>
     <AssemblyName>MongoDB.QueryBuilder.Abstractions</AssemblyName>
-    <PackageId>MongoDB.Data.QueryBuilder.Abstractions</PackageId>
+    <PackageId>Procfit.MongoDB.Data.QueryBuilder.Abstractions</PackageId>
     <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
     <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
     <Description>Provides QueryBuilder abstractions in order to implement QueryBuilder pattern for MongoDB.Driver.</Description>

@@ -8,7 +8,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>MongoDB.UnitOfWork</RootNamespace>
     <AssemblyName>MongoDB.UnitOfWork.Abstractions</AssemblyName>
-    <PackageId>MongoDB.Data.UnitOfWork.Abstractions</PackageId>
+    <PackageId>Procfit.MongoDB.Data.UnitOfWork.Abstractions</PackageId>
     <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
     <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
     <Description>Provides UnitOfWork abstractions in order to implement UnitOfWork pattern for MongoDB.Driver.</Description>

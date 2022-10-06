@@ -8,7 +8,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>MongoDB.Infrastructure</RootNamespace>
     <AssemblyName>MongoDB.Infrastructure.Abstractions</AssemblyName>
-    <PackageId>MongoDB.Data.Infrastructure.Abstractions</PackageId>
+    <PackageId>Procfit.MongoDB.Data.Infrastructure.Abstractions</PackageId>
     <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
     <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
     <Description>Provides Infrastructure abstractions for MongoDB.Driver.</Description>
