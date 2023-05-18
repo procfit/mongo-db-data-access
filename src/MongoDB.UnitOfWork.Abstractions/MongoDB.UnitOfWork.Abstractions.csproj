@@ -1,29 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1701;1702;1705;1591</NoWarn>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <RootNamespace>MongoDB.UnitOfWork</RootNamespace>
-    <AssemblyName>MongoDB.UnitOfWork.Abstractions</AssemblyName>
-    <PackageId>Procfit.MongoDB.Data.UnitOfWork.Abstractions</PackageId>
-    <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
-    <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
-    <Description>Provides UnitOfWork abstractions in order to implement UnitOfWork pattern for MongoDB.Driver.</Description>
-    <PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>MongoDB;Mongo DB;mongo-db;Data;UnitOfWork;Unit Of Work;unit-of-work;Abstractions</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.1.1</Version>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>1701;1702;1705;1591</NoWarn>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<RootNamespace>MongoDB.UnitOfWork</RootNamespace>
+		<AssemblyName>MongoDB.UnitOfWork.Abstractions</AssemblyName>
+		<PackageId>Procfit.MongoDB.Data.UnitOfWork.Abstractions</PackageId>
+		<Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
+		<Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
+		<Description>Provides UnitOfWork abstractions in order to implement UnitOfWork pattern for MongoDB.Driver.</Description>
+		<PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>MongoDB;Mongo DB;mongo-db;Data;UnitOfWork;Unit Of Work;unit-of-work;Abstractions</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.1.4</Version>
+		<PackageVersion>1.1.4</PackageVersion>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MongoDB.Infrastructure.Abstractions\MongoDB.Infrastructure.Abstractions.csproj" />
-    <ProjectReference Include="..\MongoDB.Repository.Abstractions\MongoDB.Repository.Abstractions.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MongoDB.Infrastructure.Abstractions\MongoDB.Infrastructure.Abstractions.csproj" />
+		<ProjectReference Include="..\MongoDB.Repository.Abstractions\MongoDB.Repository.Abstractions.csproj" />
+	</ItemGroup>
 
 </Project>

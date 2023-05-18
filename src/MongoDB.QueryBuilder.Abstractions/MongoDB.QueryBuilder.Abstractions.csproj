@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1701;1702;1705;1591</NoWarn>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <RootNamespace>MongoDB.QueryBuilder</RootNamespace>
-    <AssemblyName>MongoDB.QueryBuilder.Abstractions</AssemblyName>
-    <PackageId>Procfit.MongoDB.Data.QueryBuilder.Abstractions</PackageId>
-    <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
-    <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
-    <Description>Provides QueryBuilder abstractions in order to implement QueryBuilder pattern for MongoDB.Driver.</Description>
-    <PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>MongoDB;Mongo DB;mongo-db;Data;QueryBuilder;Query Builder;query-builder;Abstractions</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.1.1</Version>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>1701;1702;1705;1591</NoWarn>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<RootNamespace>MongoDB.QueryBuilder</RootNamespace>
+		<AssemblyName>MongoDB.QueryBuilder.Abstractions</AssemblyName>
+		<PackageId>Procfit.MongoDB.Data.QueryBuilder.Abstractions</PackageId>
+		<Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
+		<Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
+		<Description>Provides QueryBuilder abstractions in order to implement QueryBuilder pattern for MongoDB.Driver.</Description>
+		<PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>MongoDB;Mongo DB;mongo-db;Data;QueryBuilder;Query Builder;query-builder;Abstractions</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.1.4</Version>
+		<PackageVersion>1.1.4</PackageVersion>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
 
 </Project>

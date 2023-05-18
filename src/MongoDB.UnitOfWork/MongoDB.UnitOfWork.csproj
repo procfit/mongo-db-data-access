@@ -1,29 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1701;1702;1705;1591</NoWarn>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <AssemblyName>MongoDB.UnitOfWork</AssemblyName>
-    <PackageId>Procfit.MongoDB.Data.UnitOfWork</PackageId>
-    <Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
-    <Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
-    <Description>Provides the UnitOfWork pattern for MongoDB.Driver.</Description>
-    <PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>MongoDB;Mongo DB;mongo-db;Data;UnitOfWork;Unit Of Work;unit-of-work</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.1.3</Version>
-    <LangVersion>latest</LangVersion>
-    <PackageVersion>1.1.3</PackageVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>1701;1702;1705;1591</NoWarn>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<AssemblyName>MongoDB.UnitOfWork</AssemblyName>
+		<PackageId>Procfit.MongoDB.Data.UnitOfWork</PackageId>
+		<Authors>Lima Technology Services;Fernando Luiz de Lima</Authors>
+		<Copyright>Copyright © Lima Technology Services;Fernando Luiz de Lima</Copyright>
+		<Description>Provides the UnitOfWork pattern for MongoDB.Driver.</Description>
+		<PackageProjectUrl>https://github.com/ffernandolima/mongo-db-data-access</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ffernandolima/mongo-db-data-access</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>MongoDB;Mongo DB;mongo-db;Data;UnitOfWork;Unit Of Work;unit-of-work</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<LangVersion>latest</LangVersion>
+		<Version>1.1.4</Version>
+		<PackageVersion>1.1.4</PackageVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MongoDB.Repository\MongoDB.Repository.csproj" />
-    <ProjectReference Include="..\MongoDB.UnitOfWork.Abstractions\MongoDB.UnitOfWork.Abstractions.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MongoDB.Repository\MongoDB.Repository.csproj" />
+		<ProjectReference Include="..\MongoDB.UnitOfWork.Abstractions\MongoDB.UnitOfWork.Abstractions.csproj" />
+	</ItemGroup>
 
 </Project>
