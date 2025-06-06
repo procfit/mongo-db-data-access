@@ -52,6 +52,6 @@ jobs:
         env:
           NUGET_API_KEY: ${{ env.FEED_KEY }}
         run: |
-          dotnet nuget push "**/*.nupkg" --api-key $NUGET_API_KEY --skip-duplicate --no-symbols true
+          dotnet nuget push "**/Procfit.*.nupkg" --api-key $NUGET_API_KEY --skip-duplicate --no-symbols true
 
 
