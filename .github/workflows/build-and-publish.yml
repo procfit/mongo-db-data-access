@@ -2,7 +2,8 @@ name: build-and-publish
 
 env:
   PROJECT: MongoDB
-  AZURE_ARTIFACTS_FEED_URL: ${{ secrets.NUGET_FEED }}
+  FEED_URL: ${{ secrets.NUGET_FEED }}
+  FEED_KEY: ${{ secrets.NUGET_KEY }}
   BUILD_CONFIGURATION: 'Release'
   DOTNET_VERSION: '9.0.x' 
 
@@ -36,18 +37,21 @@ jobs:
           dotnet restore
           dotnet build --configuration '${{ env.BUILD_CONFIGURATION }}'
           dotnet pack --no-build --configuration '${{ env.BUILD_CONFIGURATION }}'
-
-      # Setup .NET Core SDK (for push) — you can reuse the same setup step, but this illustrates separation
-      - name: Setup .NET Core (push)
+          
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
+          source-url: ${{ env.FEED_URL }}
+        env:
+          NUGET_AUTH_TOKEN: ${{ env.FEED_KEY }}   
 
       # Publish the package to nuget.org
       - name: dotnet nuget push to nuget.org
         env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+          NUGET_API_KEY: ${{ env.FEED_KEY }}
         run: |
-          dotnet nuget push "**/*.nupkg" --api-key $NUGET_ORG --source https://api.nuget.org/v3/index.json
+          dotnet nuget push "**/*.nupkg" --skip-duplicate --no-symbols true
 
 
