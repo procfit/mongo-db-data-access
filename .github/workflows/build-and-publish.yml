@@ -30,23 +30,24 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
-      # Run dotnet build and package
-      - name: dotnet build
+      # Restore, build, and pack the project
+      - name: dotnet build & pack
         run: |
           dotnet restore
           dotnet build --configuration '${{ env.BUILD_CONFIGURATION }}'
-          
-      # Setup .NET Core SDK
-      - name: Setup .NET Core
+          dotnet pack --no-build --configuration '${{ env.BUILD_CONFIGURATION }}'
+
+      # Setup .NET Core SDK (for push) — you can reuse the same setup step, but this illustrates separation
+      - name: Setup .NET Core (push)
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-          source-url: ${{ env.AZURE_ARTIFACTS_FEED_URL }}
+
+      # Publish the package to nuget.org
+      - name: dotnet nuget push to nuget.org
         env:
-          NUGET_AUTH_TOKEN: ${{ secrets.AZURE_PAT }}   
-          
-      # Publish the package to Azure Artifacts
-      - name: 'dotnet publish'
-        run: dotnet nuget push --api-key AzureArtifacts **/*.nupkg
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          dotnet nuget push "**/*.nupkg" --api-key $NUGET_ORG --source https://api.nuget.org/v3/index.json
 
 
