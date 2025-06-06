@@ -4,7 +4,7 @@ env:
   PROJECT: MongoDB
   AZURE_ARTIFACTS_FEED_URL: ${{ secrets.NUGET_FEED }}
   BUILD_CONFIGURATION: 'Release'
-  DOTNET_VERSION: '6.0.x' 
+  DOTNET_VERSION: '9.0.x' 
 
 on:
   push:
