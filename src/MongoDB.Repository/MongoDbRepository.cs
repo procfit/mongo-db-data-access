@@ -907,7 +907,7 @@ namespace MongoDB.Repository
 
         #region Private Methods
 
-        private IMongoQueryable<T> ToQueryable(IMongoDbQuery<T> query)
+        private IQueryable<T> ToQueryable(IMongoDbQuery<T> query)
         {
             IMongoDbMultipleResultQuery<T> multipleResultQuery = null;
 
@@ -955,10 +955,10 @@ namespace MongoDB.Repository
                 queryable = queryable.Select(query.Selector);
             }
 
-            return (IMongoQueryable<T>)queryable;
+            return (IQueryable<T>)queryable;
         }
 
-        private IMongoQueryable<TResult> ToQueryable<TResult>(IMongoDbQuery<T, TResult> query)
+        private IQueryable<TResult> ToQueryable<TResult>(IMongoDbQuery<T, TResult> query)
         {
             IMongoDbMultipleResultQuery<T, TResult> multipleResultQuery = null;
 
@@ -1001,7 +1001,7 @@ namespace MongoDB.Repository
                 queryable = queryable.Page(multipleResultQuery.Paging);
             }
 
-            return (IMongoQueryable<TResult>)queryable.Select(query.Selector);
+            return (IQueryable<TResult>)queryable.Select(query.Selector);
         }
 
         #endregion Private Methods

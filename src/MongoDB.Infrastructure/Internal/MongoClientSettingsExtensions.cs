@@ -1,5 +1,5 @@
 ﻿using MongoDB.Driver;
-using MongoDB.Driver.Core.Extensions.DiagnosticSources;
+// using MongoDB.Driver.Core.Extensions.DiagnosticSources;
 
 namespace MongoDB.Infrastructure.Internal
 {
@@ -9,9 +9,9 @@ namespace MongoDB.Infrastructure.Internal
         {
             if (settings != null)
             {
-                var options = new InstrumentationOptions { CaptureCommandText = true };
-
-                settings.ClusterConfigurator = builder => builder.Subscribe(new DiagnosticsActivityEventSubscriber(options));
+                // var options = new InstrumentationOptions { CaptureCommandText = true };
+                //
+                // settings.ClusterConfigurator = builder => builder.Subscribe(new DiagnosticsActivityEventSubscriber(options));
             }
 
             return settings;
